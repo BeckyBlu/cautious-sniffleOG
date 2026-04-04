@@ -1,0 +1,302 @@
+/* === Imported from Project-2026/style.css === */
+/* Color variables - TechPink & Blue Palette */
+:root {
+  --primary-pink: #ff6bff;
+  --dark-purple: #810947;
+  --deep-purple: #3d0025;
+  --text-dark: #2b1221;
+  --cyan: #00ffff;
+  --tech-blue: #0077c0;
+  --light-pink: #fee2f2;
+  --light-bg: #f0f4f8;
+  --cyan-accent: #00bbde;
+}
+
+/* Global centering */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf7f9 90%, #ffb3d9 50%, #ffa6cf 10%);
+  box-shadow: inset 0 0 60px rgba(255, 182, 219, 0.436);
+  color: #222;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease;
+}
+
+html[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1a2e 10%, #16213e 90%);
+  color: #f0f4f8;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background-color: #fdf7fc;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+#hero {
+  background: rgba(239, 107, 239, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(154, 117, 154, 0.1);
+  margin-top: 2rem;
+}
+
+html[data-theme="dark"] #hero {
+  background: rgba(37, 90, 90, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
+}
+
+.skills-list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.project-card {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Center all headings */
+h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  background: linear-gradient(90deg, var(--primary-pink), var(--dark-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: var(--dark-purple);
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6 {
+  color: var(--cyan);
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--primary-pink);
+  background: rgba(255, 107, 255, 0.02);
+}
+
+html[data-theme="dark"] header {
+  border-bottom-color: var(--cyan);
+  background: rgba(0, 255, 255, 0.02);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  color: var(--dark-purple);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  color: var(--primary-pink);
+  border-bottom-color: var(--primary-pink);
+  background: rgba(255, 107, 255, 0.1);
+}
+
+html[data-theme="dark"] .nav-list a {
+  color: var(--cyan);
+}
+
+html[data-theme="dark"] .nav-list a:hover,
+html[data-theme="dark"] .nav-list a:focus-visible {
+  color: var(--light-pink);
+  border-bottom-color: var(--light-pink);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+/* === Compatibility styles for cautious-sniffle’s current index.html hero === */
+.page-hero {
+  width: 100%;
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  padding: 0;
+}
+
+.page-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* === Imported from Project-2026/style.css === */
+/* Color variables - TechPink & Blue Palette */
+:root {
+  --primary-pink: #ff6bff;
+  --dark-purple: #810947;
+  --deep-purple: #3d0025;
+  --text-dark: #2b1221;
+  --cyan: #00ffff;
+  --tech-blue: #0077c0;
+  --light-pink: #fee2f2;
+  --light-bg: #f0f4f8;
+  --cyan-accent: #00bbde;
+}
+
+/* Global centering */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #faf7f9 90%, #ffb3d9 50%, #ffa6cf 10%);
+  box-shadow: inset 0 0 60px rgba(255, 182, 219, 0.436);
+  color: #222;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s ease;
+}
+
+html[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1a2e 10%, #16213e 90%);
+  color: #f0f4f8;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
