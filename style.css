@@ -11,37 +11,7 @@
   --light-bg: #f0f4f8;
   --cyan-accent: #00bbde;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background: linear-gradient(135deg, #1a1a2e 10%, #16213e 90%);
-    color: #f0f4f8;
-  }
 
-  #hero {
-    background: rgba(37, 90, 90, 0.05);
-    border: 1px solid rgba(0, 255, 255, 0.1);
-  }
-
-  header {
-    border-bottom-color: var(--cyan);
-    background: rgba(0, 255, 255, 0.02);
-  }
-
-  h2, h3, h4, h5, h6 {
-    color: var(--cyan);
-  }
-
-  .nav-list a {
-    color: var(--cyan);
-  }
-
-  .nav-list a:hover,
-  .nav-list a:focus-visible {
-    color: var(--light-pink);
-    border-bottom-color: var(--light-pink);
-    background: rgba(0, 255, 255, 0.1);
-  }
-}
 /* Global centering */
 body {
   display: flex;
