@@ -153,6 +153,13 @@ function clearAgeVerification() {
 // ============================================
 // Initialize on page load
 // ============================================
-document.addEventListener('DOMContentLoaded', initAgeGate);
+document.addEventListener('DOMContentLoaded', function() {
+  // Dark mode detection
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  
+  initAgeGate();
+});
 
 console.log('Becky Taha Blu site loaded with age verification');
